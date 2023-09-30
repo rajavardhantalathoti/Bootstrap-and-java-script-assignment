@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+        .login-icon {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img class="login-icon" src="username-icon.png" alt="Username Icon" width="50" height="50">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
+            
+            <img class="login-icon" src="lock-icon.png" alt="Lock Icon" width="50" height="50">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+            
+            <label for="remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me"> Remember Me
+            </label><br><br>
+            
+            <button type="submit">Login</button><br><br>
+        </form>
+        <a href="forgot-password.html">Forgot Password?</a>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            // Replace these with your actual username and password
+            const validUsername = "your_username";
+            const validPassword = "your_password";
+            
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username === validUsername && password === validPassword) {
+                alert("Login successful!");
+                // You can redirect the user to another page or perform additional actions here.
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
